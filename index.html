@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-P74BCDRV');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Oxicombustível - Fort Equipamentos</title>
+  <meta name="description"
+    content="Conheça a linha completa de oxicombustível da Fort Equipamentos. Temos maçaricos, válvulas, bicos, acessórios, kits, reguladores e máquinas de corte.">
+  <meta name="author" content="Angelo Donada">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.fortequipamentos.com/oxicombustivel">
+
+  <meta property="og:title" content="Linha Oxicombustível Completa | Fort Equipamentos">
+  <meta property="og:description"
+    content="Conheça a linha completa de oxicombustível da Fort Equipamentos: maçaricos, válvulas, bicos, acessórios, kits e mais.">
+  <meta property="og:image" content="https://www.fortequipamentos.com/oxicombustivel/assets/favicon.jpg">
+  <meta property="og:url" content="https://www.fortequipamentos.com/oxicombustivel">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Linha Oxicombustível Completa | Fort Equipamentos">
+  <meta name="twitter:description"
+    content="Conheça a linha completa de oxicombustível da Fort Equipamentos: maçaricos, válvulas, bicos, acessórios, kits e mais.">
+  <meta name="twitter:image" content="https://www.fortequipamentos.com/oxicombustivel/assets/favicon.jpg">
+
+  <meta name="theme-color" content="#2563EB">
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="512x512">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fort Equipamentos",
+    "image": "https://www.fortequipamentos.com/assets/favicon.png",
+    "@id": "https://www.fortequipamentos.com/",
+    "url": "https://www.fortequipamentos.com/",
+    "telephone": "+555135884266",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Pedro Ebling, 147",
+      "addressLocality": "São Leopoldo",
+      "addressRegion": "RS",
+      "postalCode": "93125-470",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.facebook.com/fortequipamentos",
+      "https://www.instagram.com/fortequipamentos_/",
+      "https://www.linkedin.com/company/fortequipamentos",
+      "https://www.youtube.com/@fortequipamentos"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!--Início do GTM-->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P74BCDRV" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!--Fim do GTM-->
+
+  <!--Início do Overlay-->
+  <div id="cart-overlay" class="overlay position-fixed inset-0 w-100 vh-100 d-flex align-items-center justify-content-center">
+
+    <!--Início do Carrinho-->
+    <div class="shop-container h-auto rounded-2 d-flex flex-column" role="dialog" aria-modal="true">
+      <div class="d-flex justify-content-between align-items-center px-3 py-3">
+        <p id="cartTitle" class="fw-semibold m-0">Carrinho</p>
+        <button id="fecharCarrinho" type="button" class="btn p-0 border-0 bg-transparent">
+          <i class="fa-solid fa-circle-xmark fs-4" style="color:#000000;"></i>
+        </button>
+      </div>
+      <div id="cart-items" class="px-3 d-flex flex-column gap-3 flex-grow-1 overflow-auto">
+
+        <!--Mensagem de carrinho vázio-->
+        <div id="cart-empty" class="text-center py-5" style="display:none;">
+          <i class="fa-solid fa-cart-shopping" style="font-size: 3rem; color: #999;"></i>
+          <p class="text-muted mt-3 mb-0 fs-5">Seu carrinho está vazio</p>
+        </div>
+
+        <!--Os produtos serão inseridos aqui via JS-->
+      </div>
+
+      <form id="cart-form" class="px-3 my-3">
+        <!--Objetivo-->
+        <div class="form-floating mb-3 mt-2">
+          <select class="form-selecc form-control" id="tipoCliente" required>
+            <option value="" selected disabled label=" "></option>
+            <option value="1">Consumo próprio</option>
+            <option value="2">Revenda</option>
+          </select>
+          <label for="tipoCliente">Qual o objetivo da sua compra?</label>
+          <div class="invalid-feedback">
+            Selecione o objetivo da compra.
+          </div>
+        </div>
+
+        <!--Cidade-->
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Ex: São Leopoldo" required>
+          <label for="cidade">Digite sua cidade</label>
+          <div class="invalid-feedback">
+            Digite sua cidade.
+          </div>
+        </div>
+      </form>
+
+      <!--Comprar-->
+      <div id="cart-footer" class="px-3 py-3 shadow-top">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <p class="mb-0">Total: <span id="qtdItens">0</span> item(s).</p>
+          <p id="cart-total-price" class="mb-0">R$0,00</p>
+        </div>
+        <button class="btn-comprar w-100 text-white fw-semibold rounded-2">
+          Comprar
+        </button>
+      </div>
+    </div>
+    <!--Fim do carrinho-->
+
+  </div>
+  <!--Fim do overlay-->
+
+  <!--Início do header-->
+  <header class="w-100 vh-100 d-flex flex-column justify-content-between">
+
+    <!--Ícone do Carrinho-->
+    <div class="carrinho-container position-fixed">
+      <div class="carrinho-popup position-absolute d-flex align-items-center justify-content-center">
+        <p id="cart-badge-count" class="text-white mb-0">0</p>
+      </div>
+      <div class="carrinho w-100 h-100 d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-bag-shopping fs-2" style="color: #ffffff;"></i>
+      </div>
+    </div>
+    <!--Fim do ícone do carrinho-->
+
+    <!--Início da Copy-->
+    <div>
+      <div class="copy d-flex flex-column align-items-center align-items-lg-start justify-content-end p-3 ps-lg-5">
+        <div class="d-flex flex-column gap-3">
+
+          <!--Logo-->
+          <figure class="d-flex justify-content-center mb-0">
+            <img class="logo-fort-soldas" src="assets/logo-fort-soldas.png" alt="Logo da marca Fort Soldas">
+          </figure>
+
+          <!--Textos-->
+          <div>
+            <p class="m-0 text-white text-center fs-5">Potencialize seus processos de corte e
+              solda.</p>
+            <p class="m-0 text-white text-center fs-5">Conheça nossa linha completa
+              Oxicombustível.</p>
+          </div>
+
+          <!--Dropdown categorias-->
+          <div class="dropdown d-flex justify-content-center align-items-center">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="width: 200px; height: 50px;">
+              Categorias
+            </button>
+            <ul class="dropdown-menu" style="width: 200px;">
+              <li><a class="dropdown-item" href="#maçaricos">Maçaricos</a></li>
+              <li><a class="dropdown-item" href="#reguladores">Reguladores</a></li>
+              <li><a class="dropdown-item" href="#bicos">Bicos</a></li>
+              <li><a class="dropdown-item" href="#válvulas-e-máquinas">Válvulas e Máquinas</a></li>
+              <li><a class="dropdown-item" href="#acessórios">Acessórios</a></li>
+              <li><a class="dropdown-item" href="#kits">Kits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fim da Copy-->
+
+    <!--Início CTM-->
+    <div class="atendente p-2 d-flex flex-column flex-lg-row align-items-center justify-content-around rounded-top-4">
+      <div>
+        <p class="m-0 text-white text-center text-lg-start fs-6 fst-italic fw-light">Fort Equipamentos</p>
+        <p class="localiza m-0 text-white text-center text-lg-start fw-bold">Entre em contato com o representante da sua
+          região!</p>
+      </div>
+      <div>
+        <button class="btn-atendente fs-6 fw-semibold"
+          onclick="window.open('https://wa.me/5551994231147?text=' + encodeURIComponent('Olá Fort Equipamentos! Estou interessado na linha Oxicombustível e gostaria que me indicassem o representante mais próximo para atendimento.'), '_blank', 'noopener,noreferrer')">
+          Falar com atendente
+        </button>
+      </div>
+    </div>
+    <!--Fim CTM-->
+  </header>
+  <!--Fim do header-->
+
+  <!--Início da main-->
+  <main>
+    <!--Incío de categoria-->
+    <section id="maçaricos" class="pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Maçaricos</h2>
+        </div>
+        <p class="container fs-4 text-center">Potência e precisão inigualáveis para o corte e soldagem!</p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+
+    <!--Incío de categoria-->
+    <section id="reguladores" class="pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Reguladores</h2>
+        </div>
+        <p class="container fs-4 text-center">Estabilidade e confiança para manter o desempenho ideal do seu
+          equipamento!</p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+
+    <!--Início CTM-->
+    <div class="atendente p-2 d-flex flex-column flex-lg-row align-items-center justify-content-around mt-4">
+      <div>
+        <p class="m-0 text-white text-center text-lg-start fs-6 fst-italic fw-light">Fort Equipamentos</p>
+        <p class="localiza m-0 text-white text-center text-lg-start fw-bold">Atendimento técnico direto com nossa equipe
+          de especialistas!</p>
+      </div>
+      <div>
+        <button class="btn-atendente fs-6 fw-semibold" onclick="window.location.href='tel:+5551994231147'">
+          Ligar agora
+        </button>
+      </div>
+    </div>
+    <!--Fim CTM-->
+    
+    <!--Incío de categoria-->
+    <section id="bicos" class="pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Bicos</h2>
+        </div>
+        <p class="container fs-4 text-center">Corte limpo, chama estável e o máximo rendimento em cada aplicação!</p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+
+    <!--Incío de categoria-->
+    <section id="válvulas-e-máquinas" class="pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Válvulas e Máquinas</h2>
+        </div>
+        <p class="container fs-4 text-center">Segurança, eficiência e precisão reunidas em soluções robustas para o seu
+          dia a dia!</p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+
+    <!--Início CTM-->
+    <div class="atendente p-2 d-flex flex-column flex-lg-row align-items-center justify-content-around mt-4">
+      <div>
+        <p class="m-0 text-white text-center text-lg-start fs-6 fst-italic fw-light">Fort Equipamentos</p>
+        <p class="localiza m-0 text-white text-center text-lg-start fw-bold">Converse com nossa equipe e descubra a
+          melhor solução para você!</p>
+      </div>
+      <div>
+        <button class="btn-atendente fs-6 fw-semibold"
+          onclick="window.open('https://wa.me/5551994231147?text=' + encodeURIComponent('Olá Fort Equipamentos! Estou interessado na linha Oxicombustível e gostaria de conversar com a equipe de especialistas para descobrir a melhor solução para minha necessidade.'), '_blank', 'noopener,noreferrer')">
+          Falar com consultor
+        </button>
+      </div>
+    </div>
+    <!--FIm CTM-->
+
+    <!--Incío de categoria-->
+    <section id="acessórios" class="pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Acessórios</h2>
+        </div>
+        <p class="container fs-4 text-center">Cada detalhe pensado para otimizar sua rotina de solda e corte!</p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+
+    <!--Incío de categoria-->
+    <section id="kits" class="py-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="bg-categoria titulo-categoria d-flex align-items-center justify-content-center rounded-3 mb-3">
+          <h2 class="text-fort fs-4 mb-0">Kits</h2>
+        </div>
+        <p class="container fs-4 text-center">Tudo o que você precisa, em um conjunto completo e pronto para o trabalho!
+        </p>
+      </div>
+      <div class="swiper position-relative overflow-hidden">
+        <div class="swiper-wrapper pt-3"></div>
+        <div class="swiper-button-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left fs-4"></i></div>
+        <div class="swiper-button-next" aria-label="Próximo"><i class="fa-solid fa-chevron-right fs-4"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--Fim de categoria-->
+  </main>
+  <!--Fim da main-->
+
+  <!--Início do footer-->
+  <footer>
+    <!--Informações-->
+    <div
+      class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-start text-center text-lg-start py-5">
+
+      <!--Part. 1-->
+      <div
+        class="part-1 h-auto d-flex flex-column gap-1 align-items-center align-items-lg-start text-center text-lg-start mt-5 mt-lg-0 order-2 order-lg-1">
+        <!--Logo-->
+        <figure>
+          <img class="h-auto" src="assets/logo-fort-equipamentos-branco.png" alt="Logo Fort Equipamentos">
+        </figure>
+        <!--Texto-->
+        <p class="text-white">
+          Soluções em consumíveis e equipamentos para o setor metal mecânico, com qualidade, inovação, confiança e
+          suporte próximo de você.
+        </p>
+        <!--Redes Sociais-->
+        <ul class="list-unstyled d-flex align-items-center justify-content-center gap-3 mt-2 mt-lg-4 w-100">
+          <li>
+            <a href="https://www.facebook.com/fortequipamentos" target="_blank" title="Facebook">
+              <i class="fa-brands fa-square-facebook fs-4"
+                style="color: #ffffff; transition: all .3s cubic-bezier(.4, 0, .2, 1);"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/fortequipamentos_/#" target="_blank" title="Instagram">
+              <i class="fa-brands fa-instagram fs-4"
+                style="color: #ffffff; transition: all .3s cubic-bezier(.4, 0, .2, 1);"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/fortequipamentos" target="_blank" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in fs-4"
+                style="color: #ffffff; transition: all .3s cubic-bezier(.4, 0, .2, 1);"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@fortequipamentos" target="_blank" title="YouTube">
+              <i class="fa-brands fa-youtube fs-4"
+                style="color: #ffffff; transition: all .3s cubic-bezier(.4, 0, .2, 1);"></i>
+            </a>
+          </li>
+        </ul>
+        <!--Voltar topo-->
+        <button id="btn-topo" class="btn-topo mt-lg-3 w-100">
+          <i class="fa-solid fa-angles-up" style="color: #ffffff; transition: all .3s cubic-bezier(.4, 0, .2, 1);"></i>
+          VOLTAR PARA O TOPO
+        </button>
+      </div>
+
+      <!--Part. 2-->
+      <div class="w-100 h-auto d-none d-lg-flex flex-column align-items-center order-3">
+
+        <div>
+          <h3 class="fs-3 mt-2 text-white">Navegação</h3>
+
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li>
+              <a href="https://www.fortequipamentos.com/" target="_blank">Home</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/linhas/" target="_blank">Linhas</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/contato/" target="_blank">Contanto</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/blog/" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/sobre-nos/" target="_blank">Sobre nós</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/outlet/" target="_blank">Outlet</a>
+            </li>
+            <li>
+              <a href="https://www.fortequipamentos.com/pt/catalogos/" target="_blank">Catálogos</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!--Part. 3-->
+      <div class="part-3 w-100 d-flex align-items-center justify-content-center order-1 order-lg-3">
+        <div class="w-100 d-flex">
+          <iframe class="rounded-2 w-100"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4299.423805189219!2d-51.164657723568084!3d-29.725458416559484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519429064815bcb%3A0x6384aa4c137121d8!2sFort%20Equipamentos%20Matriz!5e1!3m2!1spt-BR!2sbr!4v1762953958427!5m2!1spt-BR!2sbr"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--Copyright-->
+    <div class="bg-fort text-white d-flex justify-content-center text-center py-2">
+      <p class="m-0">
+        © <span id="ano-atual"></span> Fort Equipamentos. Todos os direitos reservados.</p>
+    </div>
+
+    <!--Autor e validação-->
+    <div class="developer">
+      <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between text-white py-2">
+
+        <div class="order-2 order-md-1">
+          <p class="m-0">Desenvolvido por
+            <a href="https://www.linkedin.com/in/angelodonada/" target="_blank" class="fw-semibold"
+              title="Desenvolver Web">Angelo Donada</a>
+          </p>
+        </div>
+
+        <div class="order-1 order-md-2">
+          <a class="d-flex align-items-center fw-semibold gap-1"
+            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.fortequipamentos.com%2Foxicombustivel"
+            target="_blank" title="Tecnologia W3C">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="text-primary"
+              style="width: 1.25rem; height: 1.25rem;">
+              <path
+                d="M12 18.1778L16.6192 16.9222L17.2434 10.1444H9.02648L8.82219 7.88889H17.4477L17.6747 5.67778H6.32535L6.96091 12.3556H14.7806L14.5195 15.2222L12 15.8889L9.48045 15.2222L9.32156 13.3778H7.0517L7.38083 16.9222L12 18.1778ZM3 2H21L19.377 20L12 22L4.62295 20L3 2Z">
+              </path>
+            </svg>
+            <span>W3C Validador</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!--FIm do footer-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
