@@ -74,50 +74,60 @@
   <!--Fim do GTM-->
 
   <!--Início do Overlay-->
-  <div id="cart-overlay" class="overlay position-fixed inset-0 w-100 vh-100 d-flex align-items-center justify-content-center">
+  <div id="cart-overlay"
+    class="overlay position-fixed inset-0 w-100 vh-100 d-flex align-items-center justify-content-center">
 
     <!--Início do Carrinho-->
     <div class="shop-container rounded-2 d-flex flex-column" role="dialog" aria-modal="true">
+
       <div class="d-flex justify-content-between align-items-center px-3 py-3">
-        <p id="cartTitle" class="fw-semibold m-0">Carrinho</p>
+          <p id="cartTitle" class="fw-semibold m-0">
+            Carrinho</p>
+          <button id="limparCarrinho" type="button" class="btn-limpar-carrinho" style="display: none;">
+            Limpar carrinho
+          </button>
+
         <button id="fecharCarrinho" type="button" class="btn p-0 border-0 bg-transparent">
           <i class="fa-solid fa-circle-xmark fs-4" style="color:#000000;"></i>
         </button>
       </div>
-      <div id="cart-items" class="px-3 d-flex flex-column gap-3 flex-grow-1 overflow-auto">
 
-        <!--Mensagem de carrinho vázio-->
-        <div id="cart-empty" class="text-center py-5" style="display:none;">
-          <i class="fa-solid fa-cart-shopping" style="font-size: 3rem; color: #999;"></i>
-          <p class="text-muted mt-3 mb-0 fs-5">Seu carrinho está vazio</p>
+      <div class="flex-grow-1 overflow-auto">
+        <div id="cart-items" class="px-3 d-flex flex-column gap-3 flex-grow-1 overflow-auto">
+
+          <!--Mensagem de carrinho vázio-->
+          <div id="cart-empty" class="text-center py-5" style="display:none;">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 3rem; color: #999;"></i>
+            <p class="text-muted mt-3 mb-0 fs-5">Seu carrinho está vazio</p>
+          </div>
+
+          <!--Os produtos serão inseridos aqui via JS-->
         </div>
 
-        <!--Os produtos serão inseridos aqui via JS-->
+        <form id="cart-form" class="px-3 my-3">
+          <!--Objetivo-->
+          <div class="form-floating mb-3 mt-2">
+            <select class="form-selecc form-control" id="tipoCliente" required>
+              <option value="" selected disabled label=" "></option>
+              <option value="1">Consumo próprio</option>
+              <option value="2">Revenda</option>
+            </select>
+            <label for="tipoCliente">Qual o objetivo da sua compra?</label>
+            <div class="invalid-feedback">
+              Selecione o objetivo da compra.
+            </div>
+          </div>
+
+          <!--Cidade-->
+          <div class="form-floating mb-2">
+            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Ex: São Leopoldo" required>
+            <label for="cidade">Digite sua cidade</label>
+            <div class="invalid-feedback">
+              Digite sua cidade.
+            </div>
+          </div>
+        </form>
       </div>
-
-      <form id="cart-form" class="px-3 my-3">
-        <!--Objetivo-->
-        <div class="form-floating mb-3 mt-2">
-          <select class="form-selecc form-control" id="tipoCliente" required>
-            <option value="" selected disabled label=" "></option>
-            <option value="1">Consumo próprio</option>
-            <option value="2">Revenda</option>
-          </select>
-          <label for="tipoCliente">Qual o objetivo da sua compra?</label>
-          <div class="invalid-feedback">
-            Selecione o objetivo da compra.
-          </div>
-        </div>
-
-        <!--Cidade-->
-        <div class="form-floating mb-2">
-          <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Ex: São Leopoldo" required>
-          <label for="cidade">Digite sua cidade</label>
-          <div class="invalid-feedback">
-            Digite sua cidade.
-          </div>
-        </div>
-      </form>
 
       <!--Comprar-->
       <div id="cart-footer" class="px-3 py-3 shadow-top">
@@ -256,7 +266,7 @@
       </div>
     </div>
     <!--Fim CTM-->
-    
+
     <!--Incío de categoria-->
     <section id="bicos" class="pt-5">
       <div class="d-flex flex-column align-items-center">

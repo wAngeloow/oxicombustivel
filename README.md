@@ -1,28 +1,32 @@
 <div align="center">
-  <h1>Burguerito</h1>
-  <p>Site responsivo de uma hamburgueria fictícia.<br>
-    Os preços e imagens exibidos são meramente ilustrativos, criados exclusivamente para fins de portfólio e não representam uma empresa real.</p>
+  <h1>Oxicombustível</h1>
+  <p>
+    Site profissional desenvolvido para a Fort Equipamentos, focado na promoção e venda da sua linha de produtos de Oxicombustível.<br>
+    O projeto serve como uma landing page otimizada para campanhas de tráfego pago (Meta Ads e Google Ads), facilitando o processo de cotação e compra.
+  </p>
 </div>
 
 <br>
 
 ## 🛠 Tecnologias Utilizadas
 
-- **Frontend:** HTML, CSS, JavaScript, TailwindCSS, Node.js
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Design:** Figma
 - **Outras ferramentas:** VS Code, GitHub
 
 <br>
 
 ## 📌 Funcionalidades
 
-- **Design Responsivo:** O site se adapta perfeitamente a qualquer dispositivo (desktop, tablet e mobile), garantindo uma experiência de navegação agradável.  
-- **Adicionar/Remover Itens do Carrinho:** O usuário pode adicionar ou remover itens do carrinho de compras de forma simples e rápida.  
-- **Limpar Carrinho:** Permite limpar todo o conteúdo do carrinho com um único clique, facilitando a gestão das compras.  
-- **Preenchimento de Dados:** O usuário pode preencher dados de pagamento, observações e endereço, garantindo um processo de compra completo e eficiente.  
-- **Exibição do Status de Abertura:** O site exibe o status de abertura da hamburgueria conforme o horário, informando se está aberta ou fechada no momento.  
-- **Imagens Interativas dos Hambúrgueres:** Ao clicar nas imagens dos hambúrgueres, o usuário pode visualizar essas imagens em tamanho maior, proporcionando uma melhor visualização.  
-- **Barra de Rolagem:** Exibe uma barra de rolagem mostrando se o usuário está perto do final da página, proporcionando uma navegação mais intuitiva.  
-- **Ícones de Redes Sociais:** Ícones visíveis no site levam diretamente às redes sociais do estabelecimento, facilitando o acesso às suas plataformas.  
+- **Design Responsivo:** O site se adapta perfeitamente a qualquer dispositivo (desktop, tablet e mobile), garantindo uma experiência de navegação agradável.
+- **Conteúdo Dinâmico (via JSON):** Todo o catálogo (itens, preços, imagens de capa e categorias) é carregado dinamicamente via JavaScript a partir de um arquivo JSON, facilitando a manutenção e atualização dos produtos.
+- **Carrinho de Compras Interativo:** O usuário pode adicionar ou remover itens do carrinho de compras e visualizar o valor total atualizado em tempo real.
+- **Persistência do Carrinho (Local Storage):** Os itens adicionados ao carrinho ficam salvos no navegador (Local Storage). Mesmo que o usuário feche ou atualize a página, suas escolhas permanecem.
+- **Limpar Carrinho:** Permite limpar todo o conteúdo do carrinho com um único clique ou esvaziar o carrinho automaticamente após a finalização da compra.
+- **Finalização via WhatsApp:** Facilita a venda ao permitir que o usuário finalize a compra (cotação) enviando os detalhes do carrinho diretamente para um vendedor via WhatsApp.
+- **Carrossel de Produtos:** Um carrossel interativo exibe os produtos de forma intuitiva e organizada.
+- **Mapa Interativo:** Exibe a localização da empresa em um mapa interativo para fácil visualização.
+- **Botões de Contato Rápido:** O site possui botões em destaque para iniciar uma conversa direta no WhatsApp ou realizar uma ligação telefônica para a empresa. 
 
 <br>
 
@@ -34,7 +38,7 @@ Siga os passos abaixo para rodar o projeto localmente:
    - Clique em **Code → Download ZIP** e extraia a pasta, ou
    - Clone o repositório com Git:
      ```bash
-     git clone https://github.com/wAngeloow/burguerito.git
+     git clone https://github.com/wAngeloow/oxicombustivel.git
      ```
 
 2. Abra o projeto no VS Code (ou outro editor de sua preferência).
@@ -52,14 +56,13 @@ Siga os passos abaixo para rodar o projeto localmente:
 </div>
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/dea60e0e-6f01-4336-8939-a1e2539e6aa9" alt="Vídeo de demonstração da página">
+  <img src="https://github.com/user-attachments/assets/25685b4e-8b33-4bae-a997-0fe5eecca459" alt="Vídeo de demonstração da página">
 </div>
 
 <br>
 
 <div align="center">
-  <a href="https://wangeloow.github.io/burguerito/">
+  <a href="https://wangeloow.github.io/oxicombustivel/">
     <button>Deploy</button>
   </a>
 </div>
-

@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
+
 /* Fim - Estilos Globais */
 
 /* Inicio - Estilos Gerais (Links) */
@@ -24,6 +25,7 @@ a {
 a:hover {
   color: #2563EB;
 }
+
 /* Fim - Estilos Gerais (Links) */
 
 /* Inicio - Classes Utilitárias */
@@ -38,6 +40,7 @@ a:hover {
 .bg-categoria {
   background-color: #C5D2ED;
 }
+
 /* Fim - Classes Utilitárias */
 
 /* Inicio - Modal Carrinho de Compras */
@@ -54,6 +57,16 @@ a:hover {
   pointer-events: auto;
 }
 
+.btn-limpar-carrinho {
+  background-color: transparent;
+  border: none;
+  color: #FF0004;
+}
+
+.btn-limpar-carrinho:hover {
+  text-decoration: underline;
+}
+
 #fecharCarrinho {
   cursor: pointer;
 }
@@ -62,10 +75,6 @@ a:hover {
   width: 600px;
   max-height: 600px;
   background-color: #ffffff;
-}
-
-.shop-container>.px-3.d-flex.flex-column.gap-3 {
-  overflow-y: auto;
 }
 
 .borda-carrinho {
@@ -104,6 +113,7 @@ a:hover {
 .btn-comprar:hover {
   background-color: #003fc7;
 }
+
 /* Fim - Modal Carrinho de Compras */
 
 /* Inicio - Header */
@@ -117,6 +127,7 @@ header {
 .copy {
   height: 75vh;
 }
+
 /* Fim - Header */
 
 /* Inicio - Ícone Carrinho Flutuante */
@@ -149,6 +160,7 @@ header {
 .carrinho-popup.update {
   transform: scale(1.2);
 }
+
 /* Fim - Ícone Carrinho Flutuante */
 
 /* Inicio - Banner CTA (Atendente) */
@@ -179,6 +191,7 @@ header {
   color: #ffffff;
   border: solid 2px white;
 }
+
 /* Fim - Banner CTA (Atendente) */
 
 /* Inicio - Main */
@@ -190,6 +203,7 @@ main {
   width: 250px;
   height: 50px;
 }
+
 /* Fim - Main */
 
 /* Inicio - Card do Produto */
@@ -235,6 +249,7 @@ main {
 .btn-add-carrinho:hover {
   background-color: #003fc7 !important;
 }
+
 /* Fim - Card do Produto */
 
 /* Inicio - Carrossel (Swiper) */
@@ -295,6 +310,7 @@ main {
 .swiper.no-scroll::after {
   opacity: 0;
 }
+
 /* Fim - Carrossel (Swiper) */
 
 /* Inicio - Footer */
@@ -336,6 +352,7 @@ iframe {
 .developer {
   background-color: #030712;
 }
+
 /* Fim - Footer */
 
 /* Inicio - Media Query Tablet (<= 992px) */
@@ -385,6 +402,11 @@ iframe {
     height: auto;
   }
 
+  .localiza {
+    padding: 0 15px 0 15px;
+    font-size: 20px;
+  }
+
   .swiper {
     width: 90% !important;
   }
@@ -397,6 +419,7 @@ iframe {
     width: 75% !important;
   }
 }
+
 /* Fim - Media Query Tablet */
 
 /* Inicio - Media Query Mobile (<= 576px) */
@@ -448,7 +471,6 @@ iframe {
 
   .localiza {
     padding: 0 15px 0 15px;
-    font-size: 20px;
   }
 
   .btn-atendente {
@@ -483,4 +505,5 @@ iframe {
     width: 90% !important;
   }
 }
+
 /* Fim - Media Query Mobile */

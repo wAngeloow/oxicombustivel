@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shopContainer = document.querySelector('.shop-container');
   const cartIcon = document.querySelector('.carrinho');
   const closeCartBtn = document.getElementById('fecharCarrinho');
+  const btnLimparCarrinho = document.getElementById('limparCarrinho');
   const cartItemsContainer = document.getElementById('cart-items');
   const badgeCountEl = document.getElementById('cart-badge-count');
   const totalItemsEl = document.getElementById('qtdItens');
@@ -193,6 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.overflow = '';
   }
 
+  function limparCarrinho() {
+    cartState.clear();
+    renderCart(); // Re-renderiza o carrinho (que vai esconder tudo e mostrar a msg "vazio")
+  }
+
   function saveCartToStorage() {
     try {
       const arr = [];
@@ -256,6 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emptyBlock.style.display = "block";
       if (form) form.style.display = "none";
       if (footer) footer.style.display = "none";
+      if (btnLimparCarrinho) btnLimparCarrinho.style.display = "none";
 
       updateCartSummary();
       saveCartToStorage();
@@ -265,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     emptyBlock.style.display = "none";
     if (form) form.style.display = "";
     if (footer) footer.style.display = "";
+    if (btnLimparCarrinho) btnLimparCarrinho.style.display = "";
 
     cartState.forEach(({ product, qty }) => {
       const unidade = getUnit(product);
@@ -362,7 +370,20 @@ document.addEventListener('DOMContentLoaded', () => {
       inputCidade.classList.remove("is-invalid");
     }
 
-    if (temErro) return;
+    if (temErro) {
+      const form = document.getElementById('cart-form');
+      if (!form) return;
+
+      const firstInvalidField = form.querySelector('.is-invalid');
+      if (firstInvalidField) {
+        firstInvalidField.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }
+
+      return;
+    }
 
     const tipoTexto = selectTipoCliente.options[selectTipoCliente.selectedIndex].text;
     let total = 0;
@@ -474,6 +495,11 @@ ${itensTexto}
       }
       renderCart();
     });
+  }
+
+  // Ação de Limpar Carrinho
+  if (btnLimparCarrinho) {
+    btnLimparCarrinho.addEventListener('click', limparCarrinho);
   }
 
   // Ação de Comprar (WhatsApp)
