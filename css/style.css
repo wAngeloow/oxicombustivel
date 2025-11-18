@@ -99,6 +99,10 @@ a:hover {
   border-radius: 5px;
 }
 
+.logo-oxi {
+  max-width: 400px;
+}
+
 .shadow-top {
   box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, .3);
 }
@@ -118,10 +122,15 @@ a:hover {
 
 /* Inicio - Header */
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-    url(../assets/hero.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(../assets/hero.webp);
   background-position: center 90%;
   background-size: cover;
+}
+
+.logo-fort-header{
+  max-width: 300px;
+  height: auto;
 }
 
 .copy {
@@ -167,7 +176,7 @@ header {
 .atendente {
   width: 100%;
   height: 150px;
-  background-image: url(../assets/bg-customer.png);
+  background-image: url(../assets/bg-customer.webp);
   background-position: center;
   background-size: cover;
 }
@@ -393,13 +402,13 @@ iframe {
     background-position: calc(100% + 50px) calc(50% - 50px);
   }
 
-  .copy {
-    height: 55vh;
+  .logo-fort-header{
+    max-width: 250px;
+    margin-top: 5px !important;
   }
 
-  .logo-fort-soldas {
-    max-width: 500px;
-    height: auto;
+  .copy {
+    height: 55vh;
   }
 
   .localiza {
@@ -461,8 +470,13 @@ iframe {
     padding: 3px;
   }
 
-  .logo-fort-soldas {
-    max-width: 250px;
+  .logo-fort-header{
+    max-width: 200px;
+    margin-top: 10px !important;
+  }
+
+  .logo-oxi {
+    max-width: 300px;
   }
 
   .atendente {
