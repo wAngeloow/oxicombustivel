@@ -22,11 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     kits: 'Kits'
   };
 
-  const unitById = {
-    34: 'mts', // MANGUEIRA PARA AR
-    35: 'mts'  // MANGUEIRA
-  };
-
   const CART_STORAGE_KEY = 'fort_cart_oxicombustivel';
 
   // ==============================================
@@ -77,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const moneyBR = v => Number(v).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   function getUnit(product) {
-    return unitById[product.id] || 'un.';
+    return product.unidade_medida || '';
   }
 
   // ==============================================
@@ -111,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="text-secondary text-decoration-line-through mb-0">${baseFmt}</span>
                 <span class="desconto rounded-pill d-flex justify-content-center align-items-center">-${pct}%</span>
               </div>` : ``}
-            <p class="fw-bold fs-3 mb-0">${finalFmt} <span class="fs-4">/${unidade}<span></p>
+            <p class="fw-bold fs-3 mb-0">${finalFmt} <span class="fs-4">${unidade ? `/${unidade}.` : ''}<span></p>
           </div>
           <div class="d-flex justify-content-center mb-4 mt-2">
             <button class="btn-add-carrinho rounded-3 fw-bold fs-5 text-white" data-id="${p.id}">
@@ -158,6 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
       rewind: true,
       watchOverflow: true,
       resistanceRatio: 0,
+      preloadImages: false,
+      lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: true,
+        loadPrevNextAmount: 2,
+      },
       pagination: pagEl ? { el: pagEl, clickable: true } : undefined,
       navigation: { nextEl, prevEl },
       breakpoints: { 0: { spaceBetween: 16 }, 576: { spaceBetween: 20 }, 992: { spaceBetween: 30 } }
@@ -298,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="d-flex justify-content-between align-items-center">
             <div>
               <p class="fs-5 fw-semibold mb-0 preco-carrinho">
-                ${moneyBR(subtotal)} /${unidade}
+                ${moneyBR(subtotal)}${unidade ? ` /${unidade}.` : ''}
               </p>
             </div>
             <div class="d-flex gap-2 align-items-center">
@@ -395,6 +396,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const valorFmt = moneyBR(subtotal);
       const valorSemRS = valorFmt.replace('R$', '').trim();
       itensTexto += `- ${product.nome} - (*Qtd*: ${qty}): R$${valorSemRS}\n`;
+    });
+
+    //Dispara evento de "Comprado com sucesso" (GTM)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'comprar_oxi_sucesso',
+        tipo_cliente: selectTipoCliente.value,
+        cidade: cidade,
+        valor_total: total,
+        qtd_itens: cartState.size
     });
 
     const mensagem =
